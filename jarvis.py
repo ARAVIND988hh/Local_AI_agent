@@ -4,16 +4,15 @@ import tkinter as tk
 from urllib.parse import quote
 import ollama, pyttsx3, pyautogui, sounddevice as sd, speech_recognition as sr
 
-MIC_INDEX = 6          # ನಿನಗೆ work ಆದ number (6, 12, ಅಥವಾ 20)
+MIC_INDEX = 6          
 SECONDS = 6
 LANG = "en-IN"
-WAKE_ENABLED = True    # False = hover ಮಾತ್ರ (mic ಯಾವಾಗಲೂ ಕೇಳುವುದಿಲ್ಲ)
+WAKE_ENABLED = True    
 WAKE_WORDS = ["jarvis", "jarves", "jarvas", "jarvish", "travis"]
 MODEL = "qwen2.5:3b"
 VISION_MODEL = "qwen2.5vl:3b"
 GREETING = "Hello sir, what can I do for you?"
-KEEP_MINUTES = 60      # ಇಷ್ಟು ನಿಮಿಷಕ್ಕಿಂತ ಹಳೆಯ screenshots delete ಆಗುತ್ತವೆ
-
+KEEP_MINUTES = 60      
 SHOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "screenshots")
 
 r = sr.Recognizer()
